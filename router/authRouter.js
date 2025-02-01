@@ -241,5 +241,28 @@ authRouter.post("/login", login)
  *                   example: "tizimga ulanishdagi xatolik"
  */
 authRouter.post("/logout", authMiddleware.tokenCheck, logout)
+
+/**
+ * @swagger
+ * /auth/forgotPsw:
+ *   post:
+ *     summary: Parolni tiklash
+ *     description: Foydalanuvchining email manziliga yangi parol yuboriladi.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 example: "user@example.com"
+ *     responses:
+ *       201:
+ *         description: Yangi parol emailga yuborildi.
+ *       404:
+ *         description: Foydalanuvchi topilmadi.
+ */
 authRouter.post("/forgotPsw", forgotPsw)
 module.exports = authRouter
