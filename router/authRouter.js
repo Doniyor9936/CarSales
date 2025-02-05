@@ -5,41 +5,45 @@ const { authValidation } = require("../middleware/authValidationMiddleware")
 // const authValidation = require("../validation/authValidation")
 
 const authRouter = Router()
-
 /**
  * @swagger
- * /register:
+ * /auth/register:
  *   post:
- *     summary: "Foydalanuvchini ro'yxatdan o'tkazish"
- *     description: "Foydalanuvchi ma'lumotlarini kiritib, ro'yxatdan o'tkazish va email tasdiqlash kodini yuborish."
- *     tags: [Auth]
+ *     summary: "Foydalanuvchi ro'yxatdan o'tishi..."
+ *     description: "Yangi foydalanuvchi yaratish va email tasdiqlash kodi yuborish"
+ *     tags:
+ *       - Authentication
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - fullName
+ *               - password
+ *               - email
+ *               - role
  *             properties:
  *               fullName:
  *                 type: string
- *                 description: "Foydalanuvchining to'liq ismi"
- *               email:
- *                 type: string
- *                 description: "Foydalanuvchining email manzili"
+ *                 minLength: 1
+ *                 maxLength: 50
+ *                 example: "Ixtiyor Qalandarov"
  *               password:
  *                 type: string
- *                 description: "Foydalanuvchining paroli"
+ *                 example: "123456"
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 example: "ixtiyorqalandarov853@gmail.com"
  *               role:
  *                 type: string
- *                 description: "Foydalanuvchining roli (admin yoki user)"
- *             required:
- *               - fullName
- *               - email
- *               - password
- *               - role
+ *                 enum: ["user", "admin"]
+ *                 example: "user"
  *     responses:
  *       201:
- *         description: "Foydalanuvchi muvaffaqiyatli ro'yxatdan o'tdi, email tasdiqlash kodi yuborildi."
+ *         description: "Foydalanuvchi muvaffaqiyatli yaratildi, email tasdiqlash kodi yuborildi"
  *         content:
  *           application/json:
  *             schema:
@@ -51,17 +55,20 @@ const authRouter = Router()
  *                 user:
  *                   type: object
  *                   properties:
- *                     email:
+ *                     _id:
  *                       type: string
- *                       example: "user@example.com"
+ *                       example: "60d0fe4f5311236168a109ca"
  *                     fullName:
  *                       type: string
- *                       example: "John Doe"
+ *                       example: "Ixtiyor Qalandarov"
+ *                     email:
+ *                       type: string
+ *                       example: "ixtiyorqalandarov853@gmail.com"
  *                     role:
  *                       type: string
  *                       example: "user"
  *       400:
- *         description: "Foydalanuvchi allaqachon mavjud."
+ *         description: "Foydalanuvchi allaqachon mavjud"
  *         content:
  *           application/json:
  *             schema:
@@ -71,7 +78,7 @@ const authRouter = Router()
  *                   type: string
  *                   example: "user already exists"
  *       500:
- *         description: "Server xatosi."
+ *         description: "Server xatosi"
  *         content:
  *           application/json:
  *             schema:
@@ -79,7 +86,7 @@ const authRouter = Router()
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Internal server error"
+ *                   example: "Internal Server Error"
  */
 
 authRouter.post("/register",authValidation, register)

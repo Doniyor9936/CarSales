@@ -7,14 +7,13 @@ const BaseError = require('../error/errorHandler');
 const { accessToken, refreshToken } = require("../utils/tokenGenerate");
 
 
-
 const register = async (req, res, next) => {
     try {
 
-        const { fullName, password, email, role, phoneNumber } = req.body
+        const { fullName, password, email, role } = req.body
         const foundetUser = await AuthModel.findOne({ email })
         if (foundetUser) {
-            res.status(400).json("user alredy exists")
+          return  res.status(400).json("user alredy exists")
         }
         const code = codeGenerate()
         await mailService.sendMail(email, code)
@@ -23,7 +22,6 @@ const register = async (req, res, next) => {
             email,
             password: hashPassword,
             fullName,
-            phoneNumber,
             verificationCode: code,
             role
         });
