@@ -13,7 +13,7 @@ const logger = require("./utils/logger")
 app.use(express.json())
 app.use(cors())
 
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(carCategoryRouter)
 app.use(carRouter)
