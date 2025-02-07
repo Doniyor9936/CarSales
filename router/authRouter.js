@@ -7,7 +7,7 @@ const { authValidation } = require("../middleware/authValidationMiddleware")
 const authRouter = Router()
 /**
  * @swagger
- * /auth/register:
+ * /register:
  *   post:
  *     summary: "Foydalanuvchi ro'yxatdan o'tishi"
  *     description: "Yangi foydalanuvchi yaratish va email tasdiqlash kodi yuborish"
