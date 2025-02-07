@@ -9,7 +9,7 @@ const authRouter = Router()
  * @swagger
  * /auth/register:
  *   post:
- *     summary: "Foydalanuvchi ro'yxatdan o'tishi..."
+ *     summary: "Foydalanuvchi ro'yxatdan o'tishi"
  *     description: "Yangi foydalanuvchi yaratish va email tasdiqlash kodi yuborish"
  *     tags:
  *       - Authentication
