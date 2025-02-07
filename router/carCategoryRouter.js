@@ -61,7 +61,7 @@ const carCategoryRouter = Router()
 carCategoryRouter.post("/addCategory", authMiddleware.tokenCheck, authMiddleware.roleCheck, categoryMiddleware, categoryAdd)
 /**
  * @swagger
- * /category:
+ * /getCategory:
  *   get:
  *     summary: "Kategoriya ro'yxatini olish"
  *     description: "Barcha brend kategoriyalarini tizimdan olish."
@@ -116,7 +116,7 @@ carCategoryRouter.post("/addCategory", authMiddleware.tokenCheck, authMiddleware
 carCategoryRouter.get("/getCategory", categoryMiddleware, categoryGet)
 /**
  * @swagger
- * /category/{brendName}:
+ * /editCategory/{brendName}:
  *   put:
  *     summary: "Kategoriya ma'lumotlarini yangilash"
  *     description: "Kategoriya ma'lumotlarini yangilash. Brend nomiga qarab yangilash amalga oshiriladi."
@@ -200,7 +200,7 @@ carCategoryRouter.get("/getCategory", categoryMiddleware, categoryGet)
 carCategoryRouter.put("/editCategory/:brendName", categoryMiddleware, categoryUpdate)
 /**
  * @swagger
- * /category/{brendName}:
+ * /getCategory/{brendName}:
  *   get:
  *     summary: "Kategoriya ma'lumotlarini olish"
  *     description: "Brend nomi bo'yicha kategoriya ma'lumotlarini olish."
@@ -267,7 +267,7 @@ carCategoryRouter.put("/editCategory/:brendName", categoryMiddleware, categoryUp
 carCategoryRouter.get("/getCategory/:brendName", categoryMiddleware, categoryGetOne)
 /**
  * @swagger
- * /category/{brendName}:
+ * /deleteCategory/{brendName}:
  *   delete:
  *     summary: "Kategoriya o'chirish"
  *     description: "Brend nomi bo'yicha kategoriya o'chiriladi."

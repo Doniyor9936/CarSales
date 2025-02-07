@@ -7,7 +7,7 @@ const { carMiddleware } = require("../middleware/carValidationMiddleware")
 
 /**
  * @swagger
- * /add-car:
+ * /addCar:
  *   post:
  *     summary: "Yangi mashina qo'shish"
  *     description: "Yangi mashina ma'lumotlarini bazaga qo'shish."
@@ -92,7 +92,7 @@ carRouter.post("/addCar", authMiddleware.tokenCheck, authMiddleware.roleCheck, c
 
 /**
  * @swagger
- * /get-car:
+ * /getCar:
  *   get:
  *     summary: "Bozordagi mashinalar ro'yhatini olish"
  *     description: "Barcha mavjud mashinalarni bazadan olish va foydalanuvchiga ko'rsatish."
@@ -172,7 +172,7 @@ carRouter.post("/addCar", authMiddleware.tokenCheck, authMiddleware.roleCheck, c
 carRouter.get("/getCar", authMiddleware.tokenCheck, getCar)
 /**
  * @swagger
- * /update-car/{_id}:
+ * /putCar/{_id}:
  *   put:
  *     summary: "Mashina ma'lumotlarini yangilash"
  *     description: "Berilgan mashinaning ma'lumotlarini yangilash. Mashina ID'si orqali qidiriladi."
@@ -298,7 +298,7 @@ carRouter.put("/putCar/:_id", authMiddleware.tokenCheck, authMiddleware.roleChec
 
 /**
  * @swagger
- * /delete-car/{_id}:
+ * /deleteCar/{_id}:
  *   delete:
  *     summary: "Mashina ma'lumotlarini o'chirish"
  *     description: "Berilgan mashina ID'si orqali bazadan mashina o'chiriladi."
