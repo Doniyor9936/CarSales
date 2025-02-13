@@ -171,6 +171,7 @@
 2025-02-07T15:08:26.805Z [undefined] [32minfo[39m: Logger info
 2025-02-07T15:08:26.814Z [undefined] [33mwarn[39m: logger warn
 2025-02-07T15:08:26.815Z [undefined] [31merror[39m: logger error
+<<<<<<< HEAD
 2025-02-13T16:16:53.201Z [undefined] [32minfo[39m: Logger info
 2025-02-13T16:16:53.214Z [undefined] [33mwarn[39m: logger warn
 2025-02-13T16:16:53.216Z [undefined] [31merror[39m: logger error
@@ -183,3 +184,20 @@
 2025-02-13T18:45:58.546Z [undefined] [32minfo[39m: Logger info
 2025-02-13T18:45:58.551Z [undefined] [33mwarn[39m: logger warn
 2025-02-13T18:45:58.552Z [undefined] [31merror[39m: logger error
+=======
+2025-02-11T11:28:39.085Z [undefined] [32minfo[39m: Logger info
+2025-02-11T11:28:39.097Z [undefined] [33mwarn[39m: logger warn
+2025-02-11T11:28:39.099Z [undefined] [31merror[39m: logger error
+2025-02-11T11:58:05.565Z [undefined] [32minfo[39m: Logger info
+2025-02-11T11:58:05.571Z [undefined] [33mwarn[39m: logger warn
+2025-02-11T11:58:05.572Z [undefined] [31merror[39m: logger error
+2025-02-11T12:31:57.660Z [undefined] [32minfo[39m: Logger info
+2025-02-11T12:31:57.666Z [undefined] [33mwarn[39m: logger warn
+2025-02-11T12:31:57.667Z [undefined] [31merror[39m: logger error
+2025-02-12T09:01:12.098Z [undefined] [32minfo[39m: Logger info
+2025-02-12T09:01:12.109Z [undefined] [33mwarn[39m: logger warn
+2025-02-12T09:01:12.110Z [undefined] [31merror[39m: logger error
+2025-02-12T09:18:29.458Z [undefined] [32minfo[39m: Logger info
+2025-02-12T09:18:29.467Z [undefined] [33mwarn[39m: logger warn
+2025-02-12T09:18:29.468Z [undefined] [31merror[39m: logger error
+>>>>>>> b2ed5a967fad696601edf74e797af13eaca38d06
