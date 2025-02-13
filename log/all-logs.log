@@ -183,3 +183,6 @@
 2025-02-13T18:45:58.546Z [undefined] [32minfo[39m: Logger info
 2025-02-13T18:45:58.551Z [undefined] [33mwarn[39m: logger warn
 2025-02-13T18:45:58.552Z [undefined] [31merror[39m: logger error
+2025-02-13T19:11:33.878Z [undefined] [32minfo[39m: Logger info
+2025-02-13T19:11:33.884Z [undefined] [33mwarn[39m: logger warn
+2025-02-13T19:11:33.885Z [undefined] [31merror[39m: logger error
