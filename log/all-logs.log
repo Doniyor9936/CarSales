@@ -171,3 +171,15 @@
 2025-02-07T15:08:26.805Z [undefined] [32minfo[39m: Logger info
 2025-02-07T15:08:26.814Z [undefined] [33mwarn[39m: logger warn
 2025-02-07T15:08:26.815Z [undefined] [31merror[39m: logger error
+2025-02-13T16:16:53.201Z [undefined] [32minfo[39m: Logger info
+2025-02-13T16:16:53.214Z [undefined] [33mwarn[39m: logger warn
+2025-02-13T16:16:53.216Z [undefined] [31merror[39m: logger error
+2025-02-13T18:45:06.062Z [undefined] [32minfo[39m: Logger info
+2025-02-13T18:45:06.068Z [undefined] [33mwarn[39m: logger warn
+2025-02-13T18:45:06.069Z [undefined] [31merror[39m: logger error
+2025-02-13T18:45:43.485Z [undefined] [32minfo[39m: Logger info
+2025-02-13T18:45:43.492Z [undefined] [33mwarn[39m: logger warn
+2025-02-13T18:45:43.493Z [undefined] [31merror[39m: logger error
+2025-02-13T18:45:58.546Z [undefined] [32minfo[39m: Logger info
+2025-02-13T18:45:58.551Z [undefined] [33mwarn[39m: logger warn
+2025-02-13T18:45:58.552Z [undefined] [31merror[39m: logger error
